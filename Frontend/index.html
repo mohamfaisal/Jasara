@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="../Frontend/assets/img/jasara word logo.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+   <!--=============== GSAP ===============-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Jasara</title>
+</head>
+<body>
+
+   <!-- ========== CUSTOM CURSOR ========== -->
+   <div class="cursor__dot" id="cursor-dot"></div>
+   <div class="cursor__ring" id="cursor-ring"></div>
+
+   <!-- ========== PAGE LOADER ========== -->
+   <div class="page-loader" id="page-loader">
+      <div class="loader__inner">
+         <img src="/Frontend/assets/img/jasara-word-logo-trasparent.png" alt="Jasara Logo" class="loader__logo-img">
+         <div class="loader__bar"><div class="loader__fill"></div></div>
+      </div>
+   </div>
+
+   <!--==================== HEADER ====================-->
+<header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo">
+            <img src="/Frontend/assets/img/jasara-word-logo-trasparent.png" alt="Jasara Logo" class="nav__logo-img">
+         </a>
+
+         <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+               <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+               <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+               
+               <li class="nav__item"><a href="../Frontend/assets/pages/collection.html" class="nav__link">Collection</a></li>
+               
+               <li class="nav__item"><a href="../Frontend/assets/pages/about.html" class="nav__link">About Us</a></li>
+               <li class="nav__item"><a href="#testimonial" class="nav__link">Reviews</a></li>
+            </ul>
+            
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+         </div>
+
+      <div class="nav__actions">
+         <i class="ri-search-line nav__search" id="search-button"></i>
+         <a href="assets/pages/auth.html" class="nav__login-btn" id="login-button">
+            <i class="ri-user-line"></i>
+            <span class="nav__login-text">Sign In</span>
+         </a>
+            <i class="ri-moon-line nav__theme" id="theme-button"></i>
+      </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== SEARCH ====================-->
+   <div class="search" id="search-content">
+      <form action="" class="search__form">
+         <i class="ri-search-line search__icon"></i>
+         <input type="search" placeholder="What are you looking for?" class="search__input">
+      </form>
+      <i class="ri-close-line search__close" id="search-close"></i>
+   </div>
+
+   <!--==================== LOGIN ====================-->
+   <div class="login grid" id="login-content">
+      <i class="ri-close-line login__close" id="login-close"></i>
+   </div>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+
+      <!--==================== HOME (NEW CINEMATIC HERO) ====================-->
+      <section class="home section" id="home">
+
+         <!-- Aurora atmospheric glow -->
+         <div class="hero__aurora">
+            <div class="hero__aurora-1"></div>
+            <div class="hero__aurora-2"></div>
+         </div>
+
+         <!-- Ambient background particles -->
+         <div class="hero__particles" id="hero-particles"></div>
+
+         <!-- Floating gold orbs -->
+         <div class="hero__orb hero__orb--1"></div>
+         <div class="hero__orb hero__orb--2"></div>
+         <div class="hero__orb hero__orb--3"></div>
+
+         <!-- Marquee ticker across top of hero -->
+         <div class="hero__ticker">
+            <div class="hero__ticker-track">
+               <span>Premium Digital Editions</span><span class="hero__ticker-dot">✦</span>
+               <span>Curated Technical Literature</span><span class="hero__ticker-dot">✦</span>
+               <span>Transformative Insights</span><span class="hero__ticker-dot">✦</span>
+               <span>Exclusive Editorial Releases</span><span class="hero__ticker-dot">✦</span>
+               <span>Masterfully Crafted Narratives</span><span class="hero__ticker-dot">✦</span>
+               <span>Premium Digital Editions</span><span class="hero__ticker-dot">✦</span>
+               <span>Curated Technical Literature</span><span class="hero__ticker-dot">✦</span>
+               <span>Transformative Insights</span><span class="hero__ticker-dot">✦</span>
+               <span>Exclusive Editorial Releases</span><span class="hero__ticker-dot">✦</span>
+               <span>Masterfully Crafted Narratives</span><span class="hero__ticker-dot">✦</span>
+            </div>
+         </div>
+
+         <div class="home__container container">
+
+            <!-- Left Column: Text -->
+            <div class="home__data">
+               <div class="home__eyebrow">
+                  <div class="home__eyebrow-line"></div>
+                  <span>Est. 2024 — Dubai's Finest</span>
+               </div>
+
+               <h1 class="home__title">
+                  <span class="home__title-line home__title-line--1">Stories</span>
+                  <span class="home__title-line home__title-line--2">That Move</span>
+                  <span class="home__title-line home__title-line--3">the World</span>
+               </h1>
+
+               <p class="home__description">
+                  Discover a curated universe of premium e-books — from
+                  gripping thrillers to timeless poetry. Hundreds of titles,
+                  world-class authors, instant access.
+               </p>
+
+               <div class="home__cta">
+                  <a href="#featured" class="button home__btn-primary">
+                     <span>Explore Collection</span>
+                     <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                  <a href="#testimonial" class="home__btn-ghost">
+                     <div class="home__btn-ghost-play"><i class="ri-play-fill"></i></div>
+                     <span>Reader Stories</span>
+                  </a>
+               </div>
+
+               <div class="home__stats">
+                  <div class="home__stat">
+                     <span class="home__stat-num" data-target="1200">0</span><span class="home__stat-plus">+</span>
+                     <p class="home__stat-label">Titles</p>
+                  </div>
+                  <div class="home__stat-divider"></div>
+                  <div class="home__stat">
+                     <span class="home__stat-num" data-target="86">0</span><span class="home__stat-plus">k</span>
+                     <p class="home__stat-label">Readers</p>
+                  </div>
+                  <div class="home__stat-divider"></div>
+                  <div class="home__stat">
+                     <span class="home__stat-num" data-target="50">0</span><span class="home__stat-plus">%</span>
+                     <p class="home__stat-label">Off Today</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Center: Floating 3-D book stack -->
+            <div class="home__books" id="home-books">
+               <div class="home__books-glow"></div>
+               <div class="home__swiper swiper">
+                  <div class="swiper-wrapper">
+                     <article class="home__article swiper-slide">
+                        <div class="home__book-wrap">
+                           <img src="assets/img/home-book-1.png" alt="Book" class="home__img">
+                           <div class="home__book-shine"></div>
+                        </div>
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <div class="home__book-wrap">
+                           <img src="assets/img/home-book-2.png" alt="Book" class="home__img">
+                           <div class="home__book-shine"></div>
+                        </div>
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <div class="home__book-wrap">
+                           <img src="assets/img/home-book-3.png" alt="Book" class="home__img">
+                           <div class="home__book-shine"></div>
+                        </div>
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <div class="home__book-wrap">
+                           <img src="assets/img/home-book-4.png" alt="Book" class="home__img">
+                           <div class="home__book-shine"></div>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+
+               <!-- Floating badges around the books -->
+               <div class="hero__badge hero__badge--sale">
+                  <i class="ri-price-tag-3-fill"></i>
+                  <span>50% OFF</span>
+               </div>
+               <div class="hero__badge hero__badge--new">
+                  <i class="ri-sparkling-2-fill"></i>
+                  <span>New Arrivals</span>
+               </div>
+               <div class="hero__badge hero__badge--download">
+                  <i class="ri-download-cloud-2-fill"></i>
+                  <span>Instant</span>
+               </div>
+            </div>
+
+            <!-- Right Column: Vertical editorial strip -->
+            <div class="home__aside">
+               <div class="home__aside-line"></div>
+               <div class="home__aside-genre">
+                  <span class="home__aside-label">Browse By</span>
+                  <a href="#" class="home__aside-tag">Thriller</a>
+                  <a href="#" class="home__aside-tag">Fiction</a>
+                  <a href="#" class="home__aside-tag">Poetry</a>
+                  <a href="#" class="home__aside-tag">History</a>
+                  <a href="#" class="home__aside-tag">Self-Help</a>
+               </div>
+               <div class="home__aside-scroll">
+                  <div class="home__aside-scroll-dot"></div>
+                  <span>Scroll Down</span>
+               </div>
+            </div>
+
+         </div>
+
+         <!-- Large watermark word behind everything -->
+         <div class="hero__watermark" aria-hidden="true">JASARA</div>
+
+      </section>
+
+      <!--==================== FEATURED ====================-->
+      <section class="featured section" id="featured">
+         <h2 class="section__title">Featured Releases</h2>
+
+         <div class="featured__modern-grid container">
+            <article class="modern-card">
+               <div class="modern-card__book-wrapper">
+                  <img src="assets/img/book-1.png" alt="Featured Book" class="modern-card__img">
+                  <div class="modern-card__shadow"></div>
+               </div>
+               <div class="modern-card__info">
+                  <h3 class="modern-card__title">Modern Abstract</h3>
+                  <div class="modern-card__prices">
+                     <span class="modern-card__discount">$11.99</span>
+                     <span class="modern-card__price">$19.99</span>
+                  </div>
+                  <button class="button modern-card__btn"><i class="ri-shopping-cart-2-line"></i> Add To Cart</button>
+               </div>
+            </article>
+
+            <article class="modern-card">
+               <div class="modern-card__book-wrapper">
+                  <img src="assets/img/book-2.png" alt="Featured Book" class="modern-card__img">
+                  <div class="modern-card__shadow"></div>
+               </div>
+               <div class="modern-card__info">
+                  <h3 class="modern-card__title">Bird Park</h3>
+                  <div class="modern-card__prices">
+                     <span class="modern-card__discount">$11.99</span>
+                     <span class="modern-card__price">$19.99</span>
+                  </div>
+                  <button class="button modern-card__btn"><i class="ri-shopping-cart-2-line"></i> Add To Cart</button>
+               </div>
+            </article>
+
+            <article class="modern-card">
+               <div class="modern-card__book-wrapper">
+                  <img src="assets/img/book-3.png" alt="Featured Book" class="modern-card__img">
+                  <div class="modern-card__shadow"></div>
+               </div>
+               <div class="modern-card__info">
+                  <h3 class="modern-card__title">Memories of The Sword</h3>
+                  <div class="modern-card__prices">
+                     <span class="modern-card__discount">$11.99</span>
+                     <span class="modern-card__price">$19.99</span>
+                  </div>
+                  <button class="button modern-card__btn"><i class="ri-shopping-cart-2-line"></i> Add To Cart</button>
+               </div>
+            </article>
+
+            <article class="modern-card">
+               <div class="modern-card__book-wrapper">
+                  <img src="assets/img/book-4.png" alt="Featured Book" class="modern-card__img">
+                  <div class="modern-card__shadow"></div>
+               </div>
+               <div class="modern-card__info">
+                  <h3 class="modern-card__title">The Lord of The Kings</h3>
+                  <div class="modern-card__prices">
+                     <span class="modern-card__discount">$11.99</span>
+                     <span class="modern-card__price">$19.99</span>
+                  </div>
+                  <button class="button modern-card__btn"><i class="ri-shopping-cart-2-line"></i> Add To Cart</button>
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== DISCOUNT ====================-->
+      <section class="discount section" id="discount">
+         <div class="discount__container container grid">
+            <div class="discount__data">
+               <h2 class="discount__title section__title">Up To 50% Discount</h2>
+               <p class="discount__description">
+                  Take advantage of the discount days we have for you, buy books from your favorite
+                  writers, the more you buy, the more discounts we have for you.
+               </p>
+               <a href="#" class="button">Shop Now</a>
+            </div>
+
+            <div class="discount__images">
+               <img src="assets/img/discount-book-1.png" alt="image" class="discount__img1">
+               <img src="assets/img/discount-book-2.png" alt="image" class="discount__img2">
+            </div>
+         </div>
+      </section>
+
+      <!--==================== AUTHOR SPOTLIGHT ====================-->
+<section class="authors section" id="authors">
+         <h2 class="section__title">Meet the Visionaries</h2>
+
+         <div class="authors__container container grid">
+            <article class="author-card">
+               <div class="author-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1579038773867-044c48829161?q=80&w=387&auto=format&fit=crop" alt="Liam Tremblay" class="author-card__img">
+                  <div class="author-card__glass">
+                     <p class="author-card__bio">Weaving gripping, atmospheric narratives set against the breathtaking backdrops of the Canadian wilderness.</p>
+                  </div>
+               </div>
+               <div class="author-card__info">
+                  <h3 class="author-card__name">Liam Tremblay</h3>
+                  <span class="author-card__role">Bestselling Thriller Author</span>
+               </div>
+            </article>
+
+            <article class="author-card">
+               <div class="author-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1594672830234-ba4cfe1202dc?q=80&w=387&auto=format&fit=crop" alt="Tariq El Fassi" class="author-card__img">
+                  <div class="author-card__glass">
+                     <p class="author-card__bio">Capturing the vibrant essence and rich history of North Africa through profound storytelling.</p>
+                  </div>
+               </div>
+               <div class="author-card__info">
+                  <h3 class="author-card__name">Tariq El Fassi</h3>
+                  <span class="author-card__role">Award-Winning Poet & Novelist</span>
+               </div>
+            </article>
+
+            <article class="author-card">
+               <div class="author-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=387&auto=format&fit=crop" alt="Sarah Geston" class="author-card__img">
+                  <div class="author-card__glass">
+                     <p class="author-card__bio">Master of speculative fiction and intricate, sprawling fantasy worlds.</p>
+                  </div>
+               </div>
+               <div class="author-card__info">
+                  <h3 class="author-card__name">Sarah Geston</h3>
+                  <span class="author-card__role">Bestselling Fiction Author</span>
+               </div>
+            </article>
+
+            <article class="author-card">
+               <div class="author-card__img-wrap">
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=387&auto=format&fit=crop" alt="John Myers" class="author-card__img">
+                  <div class="author-card__glass">
+                     <p class="author-card__bio">Bringing the forgotten moments of history to life with gripping detail.</p>
+                  </div>
+               </div>
+               <div class="author-card__info">
+                  <h3 class="author-card__name">John Myers</h3>
+                  <span class="author-card__role">Historical Non-Fiction</span>
+               </div>
+            </article>
+         </div>
+      </section>
+
+      <!--==================== NEWSLETTER ====================-->
+      <section class="newsletter section" id="subscribe">
+         <div class="newsletter__container container">
+            <div class="newsletter__content">
+               <div class="newsletter__data">
+                  <h2 class="section__title newsletter__title">Join the Inner Circle</h2>
+                  <p class="newsletter__description">
+                     Subscribe to receive exclusive early access to new digital releases, curated literary insights, and special bundle discounts.
+                  </p>
+               </div>
+
+               <form action="" class="newsletter__form">
+                  <div class="newsletter__input-group">
+                     <input type="email" placeholder="Enter your email address" class="newsletter__input" required>
+                     <button type="submit" class="button newsletter__button">
+                        Subscribe <i class="ri-arrow-right-line"></i>
+                     </button>
+                  </div>
+               </form>
+            </div>
+
+            <div class="newsletter__glow newsletter__glow-1"></div>
+            <div class="newsletter__glow newsletter__glow-2"></div>
+         </div>
+      </section>
+
+      <!--==================== TESTIMONIAL ====================-->
+      <section class="testimonial section" id="testimonial">
+         <h2 class="section__title">Reader Experiences</h2>
+
+         <div class="testimonial__container container">
+            <div class="testimonial-swiper swiper">
+               <div class="swiper-wrapper">
+
+                  <article class="testimonial__card swiper-slide">
+                     <i class="ri-double-quotes-l testimonial__quote-icon"></i>
+                     <p class="testimonial__description">
+                        "Jasara has completely transformed how I consume literature. The instant access to such high-caliber, beautifully formatted digital books is unmatched."
+                     </p>
+                     <div class="testimonial__profile">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=250&auto=format&fit=crop" alt="Customer" class="testimonial__img">
+                        <div class="testimonial__info">
+                           <h3 class="testimonial__name">Elena Rostova</h3>
+                           <span class="testimonial__role">Avid Reader</span>
+                           <div class="testimonial__stars">
+                              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </article>
+
+                  <article class="testimonial__card swiper-slide">
+                     <i class="ri-double-quotes-l testimonial__quote-icon"></i>
+                     <p class="testimonial__description">
+                        "As a fellow developer, I appreciate the seamless UX. Buying and downloading Tariq El Fassi's latest release took seconds. A truly premium platform."
+                     </p>
+                     <div class="testimonial__profile">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=250&auto=format&fit=crop" alt="Customer" class="testimonial__img">
+                        <div class="testimonial__info">
+                           <h3 class="testimonial__name">Marcus Chen</h3>
+                           <span class="testimonial__role">Tech Entrepreneur</span>
+                           <div class="testimonial__stars">
+                              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </article>
+
+                  <article class="testimonial__card swiper-slide">
+                     <i class="ri-double-quotes-l testimonial__quote-icon"></i>
+                     <p class="testimonial__description">
+                        "The curation on Jasara is phenomenal. It feels like stepping into a bespoke digital library. I've discovered so many brilliant new authors here."
+                     </p>
+                     <div class="testimonial__profile">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=250&auto=format&fit=crop" alt="Customer" class="testimonial__img">
+                        <div class="testimonial__info">
+                           <h3 class="testimonial__name">Sophia Laurent</h3>
+                           <span class="testimonial__role">Literary Critic</span>
+                           <div class="testimonial__stars">
+                              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </article>
+
+               </div>
+            </div>
+         </div>
+      </section>
+
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__glow"></div>
+
+      <!-- Tagline band -->
+      <div class="footer__tagline-band container">
+         <h2 class="footer__tagline">Every great story<br>begins with <em>one page</em>.</h2>
+         <p class="footer__tagline-sub">Dubai's Premier Digital Library · Est. 2024</p>
+      </div>
+
+      <!-- Main grid -->
+      <div class="footer__container container">
+
+         <!-- Brand column -->
+         <div class="footer__brand">
+            <a href="#" class="footer__logo">
+               <img src="/Frontend/assets/img/jasara-word-logo-trasparent.png" alt="Jasara Logo" style="height: 42px;">
+            </a>
+            <p class="footer__description">
+               Curating transformative narratives and delivering premium digital literature directly to your world.
+            </p>
+
+            <!-- Mini stats -->
+            <div class="footer__mini-stats">
+               <div class="footer__mini-stat">
+                  <span class="footer__mini-stat-num">1,200+</span>
+                  <span class="footer__mini-stat-label">Titles</span>
+               </div>
+               <div class="footer__mini-stat">
+                  <span class="footer__mini-stat-num">86k</span>
+                  <span class="footer__mini-stat-label">Readers</span>
+               </div>
+               <div class="footer__mini-stat">
+                  <span class="footer__mini-stat-num">4.9★</span>
+                  <span class="footer__mini-stat-label">Rating</span>
+               </div>
+            </div>
+         </div>
+
+         <!-- Links grid -->
+         <div class="footer__data">
+            <div>
+               <h3 class="footer__title">Explore</h3>
+               <ul class="footer__links">
+                  <li><a href="#featured" class="footer__link">Latest Releases</a></li>
+                  <li><a href="#authors" class="footer__link">Our Authors</a></li>
+                  <li><a href="#discount" class="footer__link">Special Bundles</a></li>
+                  <li><a href="#home" class="footer__link">Bestsellers</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h3 class="footer__title">Support</h3>
+               <ul class="footer__links">
+                  <li><a href="#" class="footer__link">Help Center</a></li>
+                  <li><a href="#" class="footer__link">Digital Downloads</a></li>
+                  <li><a href="#subscribe" class="footer__link">Contact Us</a></li>
+                  <li><a href="#" class="footer__link">Live Chat</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h3 class="footer__title">Legal</h3>
+               <ul class="footer__links">
+                  <li><a href="../Frontend/assets/pages/legal.html" class="footer__link">Terms of Service</a></li>
+                  <li><a href="../Frontend/assets/pages/legal.html" class="footer__link">Privacy Policy</a></li>
+                  <li><a href="../Frontend/assets/pages/legal.html" class="footer__link">Refund Policy</a></li>
+                  <li><a href="../Frontend/assets/pages/legal.html" class="footer__link">Cookie Settings</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h3 class="footer__title">Follow Us</h3>
+               <div class="footer__social">
+                  <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-instagram-line"></i>
+                     <span>Instagram</span>
+                  </a>
+                  <a href="https://www.tiktok.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-tiktok-fill"></i>
+                     <span>TikTok</span>
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-facebook-circle-fill"></i>
+                     <span>Facebook</span>
+                  </a>
+                  <a href="https://www.pinterest.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-pinterest-fill"></i>
+                     <span>Pinterest</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+         <span class="footer__copy">&#169; 2026 Jasara Publishing. All Rights Reserved.</span>
+         <div class="footer__bottom-links">
+            <a href="../Frontend/assets/pages/legal.html" class="footer__bottom-link">Privacy</a>
+            <a href="../Frontend/assets/pages/legal.html" class="footer__bottom-link">Terms</a>
+            <a href="../Frontend/assets/pages/legal.html" class="footer__bottom-link">Cookies</a>
+         </div>
+         <a href="#home" class="footer__scroll-btn">
+            <i class="ri-arrow-up-line"></i>
+            Back to top
+         </a>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="assets/js/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+   <link rel="stylesheet" href="../css/styles.css">
+   <title>Welcome to Jasara</title>
+</head>
+<body class="dark-theme"> 
+
+   <div class="cursor__dot" id="cursor-dot"></div>
+   <div class="cursor__ring" id="cursor-ring"></div>
+
+   <a href="../../index.html" class="auth__back">
+      <i class="ri-arrow-left-line"></i> Back to Home
+   </a>
+
+   <main class="auth__main">
+      <div class="auth__glow auth__glow-1"></div>
+      <div class="auth__glow auth__glow-2"></div>
+
+      <div class="auth__container">
+         
+         <div class="auth__visual">
+            <div class="auth__visual-content">
+               <img src="../img/jasara-word-logo-trasparent.png" alt="Jasara" class="auth__logo">
+               <h2 class="auth__tagline">Unlock a universe of<br><em>premium literature.</em></h2>
+            </div>
+            <div class="auth__visual-overlay"></div>
+         </div>
+
+         <div class="auth__forms-wrapper">
+            
+            <div class="auth__tabs">
+               <button class="auth__tab active" data-target="sign-in">Sign In</button>
+               <button class="auth__tab" data-target="sign-up">Create Account</button>
+            </div>
+
+            <form class="auth__form active-form" id="sign-in">
+               <div class="auth__google">
+                  <button type="button" class="auth__google-btn">
+                     <i class="ri-google-fill" style="color: #fff; font-size: 1.2rem;"></i>
+                     Continue with Google
+                  </button>
+               </div>
+
+               <div class="auth__divider">
+                  <span>or proceed with email</span>
+               </div>
+
+               <div class="auth__inputs">
+                  <div class="auth__input-box">
+                     <i class="ri-mail-line"></i>
+                     <input type="email" placeholder="Email address" required>
+                  </div>
+                  <div class="auth__input-box">
+                     <i class="ri-lock-password-line"></i>
+                     <input type="password" placeholder="Password" required>
+                  </div>
+               </div>
+
+               <a href="#" class="auth__forgot">Forgot your password?</a>
+               <button type="submit" class="button auth__submit">Access Library <i class="ri-arrow-right-line"></i></button>
+            </form>
+
+            <form class="auth__form" id="sign-up">
+               <div class="auth__google">
+                  <button type="button" class="auth__google-btn">
+                     <i class="ri-google-fill" style="color: #fff; font-size: 1.2rem;"></i>
+                     Sign up with Google
+                  </button>
+               </div>
+
+               <div class="auth__divider">
+                  <span>or register with email</span>
+               </div>
+
+               <div class="auth__inputs">
+                  <div class="auth__input-box">
+                     <i class="ri-user-line"></i>
+                     <input type="text" placeholder="Full Name" required>
+                  </div>
+                  <div class="auth__input-box">
+                     <i class="ri-mail-line"></i>
+                     <input type="email" placeholder="Email address" required>
+                  </div>
+                  <div class="auth__input-box">
+                     <i class="ri-lock-password-line"></i>
+                     <input type="password" placeholder="Create Password" required>
+                  </div>
+                  <div class="auth__input-box">
+                     <i class="ri-shield-check-line"></i>
+                     <input type="password" placeholder="Confirm Password" required>
+                  </div>
+               </div>
+
+               <button type="submit" class="button auth__submit">Create Account <i class="ri-arrow-right-line"></i></button>
+            </form>
+
+         </div>
+      </div>
+   </main>
+
+   <script src="../js/auth.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+</html>
