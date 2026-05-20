@@ -402,13 +402,17 @@
                   </p>
                </div>
 
-               <form action="" class="newsletter__form">
+               <form class="newsletter__form" id="newsletter-form">
                   <div class="newsletter__input-group">
-                     <input type="email" placeholder="Enter your email address" class="newsletter__input" required>
+                     
+                     <input type="email" name="email" placeholder="Enter your email address" class="newsletter__input" required>
+                     
                      <button type="submit" class="button newsletter__button">
                         Subscribe <i class="ri-arrow-right-line"></i>
                      </button>
                   </div>
+
+                  <p class="newsletter__message" id="newsletter-message"></p>
                </form>
             </div>
 

@@ -3583,3 +3583,29 @@ html, body {
     padding-right: 1.5rem;
   }
 }
+
+/*==================== NEWSLETTER MESSAGES ====================*/
+.newsletter__message {
+  margin-top: 1rem;
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  min-height: 20px; /* Prevents layout shifting when text appears */
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInMsg 0.5s forwards;
+}
+
+.newsletter__message.success-msg {
+  color: var(--first-color); /* Jasara Gold */
+  opacity: 1;
+}
+
+.newsletter__message.error-msg {
+  color: #ff6b6b; /* Soft red for errors */
+  opacity: 1;
+}
+
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

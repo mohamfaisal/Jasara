@@ -302,15 +302,58 @@ gsap.from('.author-card', {
   ease: 'power3.out'
 });
 
-/* -- Newsletter scale-in -- */
-gsap.from('.newsletter__container', {
-  scrollTrigger: { trigger: '.newsletter.section', start: 'top 85%' },
-  scale: 0.92,
-  y: 40,
-  opacity: 0,
-  duration: 1,
-  ease: 'power3.out'
-});
+/*==================== NEWSLETTER SUBSCRIPTION ====================*/
+const newsletterForm = document.getElementById('newsletter-form');
+const newsletterMessage = document.getElementById('newsletter-message');
+
+if(newsletterForm) {
+   newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevents the page from refreshing
+
+      // Change button text to show loading state
+      const btn = newsletterForm.querySelector('button');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Securing...';
+
+      // Gather the email data
+      const formData = new FormData(newsletterForm);
+
+      try {
+         // Send to your live Formspree endpoint
+         const response = await fetch('https://formspree.io/f/mbdbdvqv', {
+            method: 'POST',
+            body: formData,
+            headers: {
+               'Accept': 'application/json'
+            }
+         });
+
+         if (response.ok) {
+            // Success: Show premium welcome message
+            newsletterMessage.textContent = 'Welcome to the Inner Circle.';
+            newsletterMessage.classList.add('success-msg');
+            newsletterForm.reset();
+         } else {
+            // Server Error
+            newsletterMessage.textContent = 'Submission failed. Please try again.';
+            newsletterMessage.classList.add('error-msg');
+         }
+      } catch (error) {
+         // Network Error
+         newsletterMessage.textContent = 'Network error. Please check your connection.';
+         newsletterMessage.classList.add('error-msg');
+      } finally {
+         // Restore button text
+         btn.innerHTML = originalText;
+         
+         // Clear the message after 5 seconds
+         setTimeout(() => {
+            newsletterMessage.textContent = '';
+            newsletterMessage.className = 'newsletter__message';
+         }, 5000);
+      }
+   });
+}
 
 /* -- Nav entrance -- */
 gsap.from('.nav__logo, .nav__item, .nav__actions', {
