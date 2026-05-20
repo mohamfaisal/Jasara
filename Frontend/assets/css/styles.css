@@ -3512,3 +3512,74 @@ body.dark-theme.cursor--hover .cursor__ring {
   font-size: var(--normal-font-size);
   margin-bottom: 1.5rem;
 }
+
+/*==================== MOBILE RESPONSIVENESS FIXES ====================*/
+
+/* Global failsafe to prevent any horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  
+  /* 1. About Us Page Fixes */
+  .about__story-img {
+    max-width: 100%; /* Forces the image to never exceed screen width */
+    height: auto;
+  }
+  
+  .about__story-img-wrap {
+    padding: 1rem; /* Reduces the frame padding on small screens */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .about__story-data {
+    padding-right: 1rem; /* Adds breathing room to the right of the text */
+  }
+  
+  .about__stats {
+    flex-wrap: wrap; /* Allows the stats to wrap to a new line instead of stretching the screen */
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  /* 2. Loader Bar Fix */
+  .loader__bar {
+    width: 80%; /* Shrinks the bar relative to the mobile screen */
+    max-width: 220px; /* Caps the maximum width */
+    margin: 0 auto; /* Keeps it perfectly centered */
+  }
+  
+  .loader__logo-img {
+    max-width: 80%; /* Prevents the logo from touching the edges */
+    height: auto;
+  }
+
+  /* 3. Footer Margin & Typography Fixes */
+  .footer__tagline-band {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .footer__tagline {
+    font-size: 2.25rem; /* Scales down the main footer heading slightly */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .footer__tagline-sub {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Additional Polish: Adjusting Hero paddings for better mobile flow */
+  .collection__header,
+  .about__hero,
+  .legal__header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
